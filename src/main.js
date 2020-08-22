@@ -4,18 +4,13 @@ import vuetify from './plugins/vuetify';
 import '@babel/polyfill'
 import router from './router'
 import store from './store'
-import { auth } from './plugins/firebase'
 
-
+import { db } from './plugins/firebase'
 Vue.config.productionTip = false
-let app
-auth.onAuthStateChanged(() => {
-  if (!app) {
+Vue.prototype.$firebase_db = db
 new Vue({
   vuetify,
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
-  }
-})

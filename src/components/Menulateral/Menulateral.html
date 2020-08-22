@@ -1,12 +1,12 @@
 <div>
   <v-card>
     <v-card-title class="primary white--text">
-      <v-btn class="secondary" @click.stop="drawer =! drawer"
+      <v-btn class="secondary" v-if="status" @click.stop="drawer =! drawer"
         ><v-icon>mdi-menu</v-icon></v-btn
       >
     </v-card-title>
   </v-card>
-  <v-navigation-drawer v-model="drawer" absolute temporary class="primary ">
+  <v-navigation-drawer v-model="drawer" absolute temporary class="primary " >
     <v-list-item>
       <v-list-item-avatar>
         <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>

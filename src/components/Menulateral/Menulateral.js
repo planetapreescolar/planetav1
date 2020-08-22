@@ -1,6 +1,7 @@
 export default {
     data() {
         return {
+            status:true,
             drawer: null,
             items: [
                 {
